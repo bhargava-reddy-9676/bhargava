@@ -1,0 +1,845 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing : border-box;
+            }
+            .logo{
+                font-size: 35px;
+                font-weight: bold;
+                color: antiquewhite;
+            }
+            body{
+                font-family: "Arial",sans-serif;
+                background-color:#0f1a2b ;
+                color: white;
+            }
+            #home{
+                 scroll-margin-top: 100px;
+            }
+            #about{
+                scroll-margin-top: 100px;
+            }
+            #education1{
+                scroll-margin-top: 65px;
+            }
+            #skills1{
+                scroll-margin-top: 80px;
+            }
+            #project{
+                scroll-margin-top: 70px;
+            }
+            #contact1{
+                scroll-margin-top: 105px;
+            }
+            header{
+                display: flex;
+                justify-content: space-between;
+                padding: 30px;
+                align-items: center;
+                background-color: black;
+            }
+            header nav a{
+                color:#ffaa33;
+                margin:25px;
+                text-decoration: none;
+                font-weight:bold;
+            }
+            header nav a:hover{
+                color:#00e1ff;
+            }
+            .hero{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:100px 50px 150px;
+            }
+            .hero-det{
+                max-width:90%;
+            }
+            .hero-det h3{
+                color:#ffaa33;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .hero-det h2{
+                color: aqua;
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+            .hero-det button{
+                padding:1%;
+                background-color:aquamarine;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: 0.5s;
+            }
+            .hero-det button:hover{
+                 background-color:#e69929;
+            }
+            .hero-img img{
+                content: ' ';
+                position:absolute;
+                top:57%;
+                left:79%;
+                    width:400px;
+                    border-radius:50%;
+                width:300px;
+                height:300px;
+                border-radius: 350px;
+                border:10px solid #00e1ff;
+                    border-radius: 60%;
+                border:10px solid #00e1ff;
+                transform: translate(-50%,-50%);
+                animation:glow 2s infinite alternate;
+            }
+            @keyframes glow {
+                0% {
+                    box-shadow: 0 0 20px #00e1ff, 0 0 40px #00e1ff, 0 0 60px #00e1ff;
+                }
+                100% {
+                     box-shadow: 0 0 40px #00e1ff, 0 0 60px #00e1ff, 0 0 80px #00e1ff;
+                    }
+            }
+            .home{
+                margin-left: 5%;
+                color:white;
+            }
+            .fresh{
+                color:mediumorchid;
+            }
+            .h{
+                font-size:100%;
+                letter-spacing: 5px;
+            }
+            #typ {
+                font-size: 1.2em; 
+            }
+            .name{
+                font-size:200%;
+                color:aquamarine;
+            }
+            .btn{
+                padding:1%;
+                border-radius:5px;
+                background-color:aquamarine;
+                font-weight: bold;
+                transition:0.4s;
+            }
+            .btn:hover{
+                border-radius: 5px;
+
+background-color: white;
+            }
+            .social-icons{
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+            footer{
+                color:black;
+                padding:1%;
+            }
+            .container{
+                background-color: black;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                padding:50px;
+                color:blueviolet;
+            }
+            h1{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 3em;
+                color:oldlace;
+                margin-bottom: 0;
+            }
+            .profile{
+                height:200px;
+                width:200px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin:30px auto;
+                border: 5px solid #00fff0;
+                box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.5);;
+                
+            }
+            h2{
+                font-size: 2.5em;
+                margin-top: 20px;
+            }
+            .p{
+                font-size: 1.2em;
+                color:white;
+                margin-bottom: 5px;
+                line-height: 1.6;
+            }
+            .about{
+                color:black;
+                font-size: 85%;
+                padding-bottom: 2%;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .a{
+                font-size: 200%;
+                text-align: center;
+            }
+            #type{
+                font-size: 100%;
+                margin-left: 10%;
+            }
+            .fre{
+                color:#00FFFF;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .ab{
+                margin-top:1.2%;
+                background-color:#8c0ee6;
+                cursor: pointer;
+                font-weight: bold;
+                border-radius: 5px;
+                transition: 0.4s;
+            }
+            .ab:hover {
+                background-color: #00fff0;
+                color:black;
+                font-family: sans-serif;
+           }
+           .rudresh{
+            color:#e69929;
+           }
+
+/-----------education------------/
+           #education1{
+            color:aqua;
+            text-align: center;
+            margin-bottom: 40px;
+           }
+           .conatiner3 {
+            display:flex
+           
+           }
+           .timeline-section{
+            width:35%;
+            position:relative;
+            padding-left: 20px;
+            margin:10px;
+            
+           }
+           .timeline-section:before {
+            content:'';
+            position:absolute;
+            left:2%;
+            top: 0;
+            bottom: 0;
+            width:6px;
+            border-radius: 2px;
+            background-color: #8c0ee6;
+           }
+           .timeline-item{
+            background-color: #092e53;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding:8%;
+            position:relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           }
+           .timeline-item:before {
+            content:'';
+            position:absolute;
+            left: -12px;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            background-color: #00aaff;
+            border-radius: 50%;
+            border: 2px solid #0d2b4a;
+           }
+           .timeline-item h4{
+            margin:0 0 10px ;
+            font-size: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+           }
+           .timeline-item span{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color:grey
+           }
+           .timeline-item p {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+           }
+           @media (max-width: 768px) {
+            .timeline-section {
+                width: 100%;
+                padding-left: 10px;
+            }
+        }
+        .skill{
+            background-color: black;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #00aaff;
+        }
+        .container2 {
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skill-section{
+            background-color: #ffaa33;
+            padding: 20px;
+            border-radius: 10px;
+            margin:20px;
+            width:300px;
+        }
+        .skill-section:hover{
+            background-color: #31c0ff;
+            color: white;
+        }
+        .skill-section h3{
+            color:yellow;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .skills{
+            margin: 15px 0;
+        }
+        .skills p{
+            font-size: 18px;
+            color:black;
+            margin:5px 0;
+        }
+        .progress-bar{
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+        }
+        .progress-bar-fill{
+            height: 100%;
+            background-color: blue;
+            width:0;
+            border-radius: 20px;
+        }
+        /--------------progress-bar fill---------------/
+        .css{width:90%;}
+        .css{width: 80%;}
+        .javascript{width:65%;} 
+        .Java{width:70%;}
+        .sql{width:70%;}
+        .web-design{width:95%;}
+        .web{width:65%;}
+        .graphic{width:85%;}
+        .desktop{width:60%;}
+
+/------------project------------/
+        #proj{
+            color: #ffffff;
+            font-size: 3rem;
+            background-color: black;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h1 span{
+            color:#865eff;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 950px;
+            margin:0;
+            padding:2opx;
+            margin-left: 2%;
+        }
+        .grid-container1{
+            gap:20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 950px;
+            margin: 0;
+            padding:20px ;
+            margin-left: 2%;
+        }
+        .project-card{
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .project-card img{
+            width: 100%;
+            height : auto;
+            border-radius: 15px;
+            display: block;
+            transition:transform 0.5s ease;
+        }
+        .project-card :hover img{
+            transition: scale(1.1);
+        }
+        .overlay{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            opacity:0;
+            background:rgba(134, 94, 255, 0.8) ;
+            display: flex;
+            transition:opacity 0.5s ease;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        .overlay{
+            margin:0;
+            color:#ffffff;
+            font-size: 1.8rem;
+            font-weight: 600;
+        } 
+        .overlay p {
+            color: #e1e1e1;
+            font-size: 1rem;
+            text-align: center;
+            padding: 0 20px;
+            margin: 10px 0;
+        }
+
+        .overlay a {
+            background-color: #ffffff;
+            color: #865eff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .overlay a:hover{
+            background-color: #fffeff;
+        } 
+        .contact{
+    color:color-mix(in xyz-d50, color percentage, color percentage);
+    background-color: white;
+    padding: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    bottom: 0;
+}
+.ch{
+    text-align: center;
+    font-size: 200%;
+    color:orange;
+
+}
+.c6{
+    text-align: center;
+    font-size: 60%;
+    color: rgb(227, 24, 58);
+    margin-bottom: 3%;
+
+}
+.get{
+    float: left;
+    border: 2px solid;
+    padding: 2%;
+    background-color: aquamarine;
+}
+
+.get6{
+    font-size: 100%;
+    line-height: 1.5;
+}
+.aget{
+    float: left;
+}
+.get61{
+    float: left;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+
+.containerz {
+    width: 96%;
+    max-width: 1500px;
+    padding: 20px;
+    background-color: #1c2541;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.contact-info {
+    width: 95%;
+}
+
+.contact-info h2 {
+    color: #00f6d2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #b0bec5;
+}
+
+.contact-info a {
+    color: #00f6d2;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-info .social-links a {
+  
+    margin-right: 15px;
+    display: flex;
+  
+}
+
+.contact-info .social-links i {
+
+    color: #00f6d2;
+}
+
+.contact-form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #3a506b;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #b0bec5;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #00f6d2;
+    border: none;
+    border-radius: 5px;
+    color: #1c2541;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #00c5aa;
+}
+footer{
+    padding:20px;
+    text-align: center;
+    background-color: black;
+}
+footer p{
+    color:#777;
+}
+.hero-det h3{
+    margin-bottom: 40px;
+}
+
+
+   
+        </style>
+    </head>
+    <body>
+     <header>
+        <div class="logo">
+        <span>Portfolio</span>
+        </div>
+        
+        <nav>
+            <a href="#home ">Home</a>
+            <a href="#about ">About</a>
+            <a href="#education1">Education</a>
+            <a href="#my-skill">Skills</a>
+            <a href="#proj">Projects</a>
+            <a href="#contact ">Contact</a>
+        </nav>
+        
+    </header>
+    <section class="hero">
+        <div class="hero-det">
+            <h3 id="home">Hello,My name is</h3>
+            <h2 class="name">Bhargava Reddy Uppuluri</h2>
+            <h1 class="h">And,I'm a <span class="fresh"></span></h1>
+       
+            <div class="social-icons">
+                
+                    
+                     <a href="https://www.linkedin.com/in/bhargava-reddy-b319042b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG7.png" alt="Linkedin" width="3%" height="3%"></a>
+
+                    <a href=" https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ql7wb49"><img  src="https://logolook.net/wp-content/uploads/2021/06/Instagr%D0%B0m-Logo.png" alt="insta" width="5%" height="5%"></a>
+
+                    <a href="https://wa.me/qr/XH4QHM3LKHISF1"><img src="https://static.vecteezy.com/system/resources/previews/021/495/946/original/whatsapp-logo-icon-free-png.png" alt="wp" width="3%" height="3%"></a>&nbsp&nbsp
+
+                    <a href="https://www.facebook.com/bhargava.reddy.1654?mibextid=ZbWKwL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/600px-Facebook_logo_%28square%29.png" alt="fb" width="3%" height="3%"></a>&nbsp&nbsp&nbsp&nbsp
+
+                    <a href="https://x.com/BhargavaRe95226?t=2h2MbF29-R0E_UfWMT8S7w&s=09"><img src="https://vectorseek.com/wp-content/uploads/2023/07/Twitter-X-Logo-Vector-01-2.jpg" alt="x" width="3%" height="3%"></a>
+
+            </div>
+        <a href="https://www.linkedin.com/in/bhargava-reddy-b319042b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><button class="btn">Hire Me</button></a>
+        </div>
+        <div class="hero-img">
+            <img src="C:\Users\bhaveen reddy\Downloads\pass photo.jpg.jpeg" alt="profile photo">
+        </div>
+
+
+    </section>
+    <div class="container ">
+        <h1 id="about">About Me</h1>
+        <img src="C:\Users\bhaveen reddy\Downloads\pass photo.jpg.jpeg" alt="profile picture" class="profile">
+        <h2>Java Developer!</h2>
+        <p><h1 id="typ">I'm <span class="Bhargava Reddy">Bhargava Reddy</span> and I'm a <span class="fre"></span></h1></p>
+        <div class="p">
+            <p class="ap">I am interested in web development.<br>
+            I can develop dynamic web pages with fully responsive.<br>
+            I can provide a life time maintanance support.<br>
+            Consider Me!
+            </p>
+        </div>
+        <a href="C:/Users/bhaveen%20reddy/Downloads/UPPULURI%20BHARGAVA%20REDDY%20RESUME448.pdf" ><button class="ab">Download CV</button></a>
+        </div>
+        
+        <h1 id="education1">Education</h1>
+
+        <div class="container3">
+            <center>
+
+<div class="timeline-section">
+            <div class="timeline-item">
+                <span>2020-2024</span>
+                <h4>B.Tech-sri venkateswara institute of technology College(Anantapur)</h4>
+                <h4>ECE(Electronics and Communication Engineering)</h4>
+                <h4>CGPA/Percentage - 7.1 / 70.00%</h4>
+                </div>
+            <div class="timeline-item">
+                <span>2018-2020</span>
+                <h4>Intermediate - Sri Satya Sai Junior college</h4>
+                <h4>MPC(Mathametics)</h4>
+                <h4>CGPA/Percentage - 8.46 / 84%</h4>
+                </div>
+            <div class="timeline-item">
+                <span>2017-2018</span>
+                <h4>ZP High School-Tadimarri</h4><br>
+                 <h4>CGPA/Percentage - 8.3 / 83%</h4>
+            </div></center>
+        </div>
+        </div>
+        <div class="skill"><h1 id="my-skill">My Skills</h1></div>
+        <div class="container2">
+            <div class="skill-section"><h3>Coding Skills</h3>
+                <div class="skills">
+                   <p>HTML<span>90%</span></p>
+                    <div class="progress-bar">
+                         <div class="progress-bar-fill css"></div>
+                          
+                        </div>
+                        </div>  
+                 <div class="skills">
+                    <p>CSS<span>80%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill css"></div>
+                  </div>
+                 </div>
+                 <div class="skills">
+                    <p>Javascript<span>65%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill javascript"></div>
+                        </div>
+                 </div>    
+                 <div class="skills">
+                    <p>Java<span>70%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill Java"></div>
+                        </div>
+                 </div> 
+                 <div class="skills">
+                    <p>SQL<span>70%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill sql"></div>
+                        </div>
+                 </div>  
+                 <div class="skills">
+                    <p><span></span></p>
+                    <div >
+                        <div ></div>
+                        </div>
+                 </div>
+            </div>
+            <div class="skill-section">
+                <h3>Professional Skills</h3>
+                <div class="skills">
+                    <p>Web Design<span>90%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill web-design"></div>
+                    </div>
+                </div>   
+                <div class="skills">
+                    <p>Web Development<span>65%</span></p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill web"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <p><span></span></p>
+                    
+                        
+                    </div>
+                </div>
+                <div class="skills">
+                    <p><span></span></p>
+                    
+                        <div class="progress-bar-fill desktop"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="proj">Letest <span>Project</span></h1>
+        <div class="grid-container">
+            <div class="project-card">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4ba02f176210989.Y3JvcCwxMDIyLDgwMCwxODcsMA.jpg" alt="project 1">
+                <div class="overlay">
+                    <h3>Portfolio</h3>
+
+<p>It's all about my portfolio</p>
+                    <a href="link" target="_blank">&#x2192;</a>
+                </div>
+            </div>
+            <div>
+               
+                <div >
+                    <h3></h3>
+                    <p></p>
+                    <a></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                
+                <div>
+                    <h3></h3>
+                    <p> </p>
+                    <a></a>
+                </div>
+            </div>
+            <div >
+                 <div >
+                    <h3></h3>
+                    <p></p>
+                    <a></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact"> 
+            <section id="contact">
+            <h1 class="ch">
+            Contact Me 
+            </h1>
+            <h6 class="c6">
+            ----Get in Touch---- 
+           </h6> 
+          
+         <div class="containerz">
+           <!-- Contact Information Section -->
+           <div class="contact-info">
+               <h2>Contact <span style="color: #00f6d2;">Me</span></h2>
+               <h6 class="get6"> 
+               Name:  Bhargava Reddy Uppuluri</h6> 
+               <h6 class="get6"> 
+                 Address:6-18,Maddalacheruvu(v),Tadimarri(m),Sri Satya Sai(D)
+                 </h6>
+    
+               <p>Let's Work Together</p>
+               Contact me in below address. <br>
+               Also you can msg me through e-mail.<br><br><a href="mailto:bhargavareddyuppuluri@gmail.com">bhargavareddyuppuluri@gmail.com</a>
+               <a href="tel:9676411086">9676411086</a>
+               <div class="social-links">
+                   <a href="https://www.linkedin.com/in/bhargava-reddy-b319042b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                   <a href="https://wa.me/+919676411086"> <i class="fab fa-whatsapp"></i></a>
+    
+                   <a href="https://www.facebook.com/bhargava.reddy.1654?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                   <a href="https://x.com/BhargvaRe95226?t=2h2MbF29-R0E_UfWMT8S7w&s=09"><i class="fab fa-twitter"></i></a>
+                   <a href="https://www.instagram.com/bhargava.18?igsh=MWRwcmV6ZDd4YTJjbA==&utm_source=ig_contact_invite"><i class="fab fa-instagram"></i></a>
+               </div>
+               </div>
+    
+    
+           <!-- Contact Form Section -->
+           <div class="contact-form">
+               <input type="text" placeholder="Enter Your Name">
+               <input type="email" placeholder="Enter Your Email">
+               <input type="text" placeholder="Enter Your Subject">
+               <textarea rows="5" placeholder="Enter Your Message"></textarea>
+               <button type="submit">Submit</button>
+           </div>
+       </div>
+    
+         </div>
+         <br>
+       
+          </section>
+          </div>
+          <footer>
+            <p>@ 2024 Bhargava Reddy  - All Rights Reserved</p>
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+         
+         var typed = new Typed(".fre",{
+        strings: ["Graduate","Developer","Freelancer"],
+        typeSpeed: 50,
+        backSpeed: 80,
+        loop: true
+        
+        })
+
+var typed = new Typed(".fresh",{
+        strings: ["Fresher","Freelancer","Designer"],
+        typeSpeed: 70,
+        backSpeed: 80,
+        loop: true
+        
+        
+        }) 
+        
+        </script>
+          
+       
+               
+            
+    </body>
+</html>
